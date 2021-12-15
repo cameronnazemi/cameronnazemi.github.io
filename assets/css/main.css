@@ -15,6 +15,14 @@
 	url("https://cameronnazemi.github.io/assets/webfonts/Calibre-Semibold.svg#filename") format("svg");
 }
 
+@font-face {
+	font-family: "FireCode-Regular";
+	src: url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.eot");
+	src: url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.woff") format("woff"),
+	url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.otf") format("opentype"),
+	url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.svg#filename") format("svg");
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -184,16 +192,17 @@ input, select, textarea {
 	}
 
 	p {
+		font-family: "FireCode-Regular";
 		text-align: justify;
 		margin: 0 0 2rem 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "Calibre-Semibold", Helvetica, sans-serif;
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: none;
+		text-transform: uppercase;
 		margin: 0 0 1rem 0;
 	}
 
@@ -3400,7 +3409,7 @@ input, select, textarea {
 
 		#intro p {
 			font-size: 1.25rem;
-			font-style: italic;
+			/* font-style: italic; */
 			margin-top: -0.25rem;
 			text-align: center;
 		}
