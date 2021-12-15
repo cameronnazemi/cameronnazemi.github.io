@@ -9,18 +9,10 @@
 
 @font-face {
 	font-family: "Calibre-Semibold";
-	src: url("Calibre-Semibold.eot");
-	src: url("Calibre-Semibold.woff") format("woff"),
-	url("Calibre-Semibold.otf") format("opentype"),
-	url("Calibre-Semibold.svg#filename") format("svg");
-}
-
-@font-face {
-	font-family: "Calibre-Semibold";
-	src: url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.eot");
-	src: url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.woff") format("woff"),
-	url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.otf") format("opentype"),
-	url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.svg#filename") format("svg");
+	src: url("https://cameronnazemi.github.io/assets/webfonts/Calibre-Semibold.eot");
+	src: url("https://cameronnazemi.github.io/assets/webfonts/Calibre-Semibold.woff") format("woff"),
+	url("https://cameronnazemi.github.io/assets/webfonts/Calibre-Semibold.otf") format("opentype"),
+	url("https://cameronnazemi.github.io/assets/webfonts/Calibre-Semibold.svg#filename") format("svg");
 }
 
 html, body, div, span, applet, object,
