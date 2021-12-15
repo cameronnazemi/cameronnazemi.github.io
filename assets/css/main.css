@@ -16,11 +16,11 @@
 }
 
 @font-face {
-	font-family: "FireCode-Regular";
-	src: url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.eot");
-	src: url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.woff") format("woff"),
-	url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.otf") format("opentype"),
-	url("https://cameronnazemi.github.io/assets/webfonts/FireCode-Regular.svg#filename") format("svg");
+	font-family: "FiraCode-Regular";
+	src: url("https://cameronnazemi.github.io/assets/webfonts/FiraCode-Regular.eot");
+	src: url("https://cameronnazemi.github.io/assets/webfonts/FiraCode-Regular.woff") format("woff"),
+	url("https://cameronnazemi.github.io/assets/webfonts/FiraCode-Regular.otf") format("opentype"),
+	url("https://cameronnazemi.github.io/assets/webfonts/FiraCode-Regular.svg#filename") format("svg");
 }
 
 html, body, div, span, applet, object,
@@ -46,6 +46,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
+	/* background-color: lightblue; */
 	line-height: 1;
 }
 
@@ -192,7 +193,7 @@ input, select, textarea {
 	}
 
 	p {
-		font-family: "FireCode-Regular";
+		font-family: "FiraCode-Regular";
 		text-align: justify;
 		margin: 0 0 2rem 0;
 	}
@@ -2937,7 +2938,7 @@ input, select, textarea {
 		}
 
 		header > p {
-			font-style: italic;
+			/* font-style: italic; */
 		}
 
 		header > h1 + p {
@@ -3250,8 +3251,8 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-color: #212931;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg");
+			background-color: #1c1d25;
+			/* background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/bg.jpg"); */
 			background-size: auto,								auto,														100% auto;
 			background-position: center,								center,														top center;
 			background-repeat: repeat,								no-repeat,													no-repeat;
