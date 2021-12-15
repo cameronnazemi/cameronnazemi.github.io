@@ -7,6 +7,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+@font-face {
+	font-family: "Calibre-Semibold";
+	src: url("Calibre-Semibold.eot");
+	src: url("Calibre-Semibold.woff") format("woff"),
+	url("Calibre-Semibold.otf") format("opentype"),
+	url("Calibre-Semibold.svg#filename") format("svg");
+}
+
+@font-face {
+	font-family: "CustomFont";
+	src: url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.eot");
+	src: url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.woff") format("woff"),
+	url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.otf") format("opentype"),
+	url("https://cameronnazemi.github.io/webfonts/Calibre-Semibold.svg#filename") format("svg");
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -185,7 +201,7 @@ input, select, textarea {
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
-		text-transform: uppercase;
+		text-transform: none;
 		margin: 0 0 1rem 0;
 	}
 
