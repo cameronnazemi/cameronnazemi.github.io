@@ -4757,7 +4757,7 @@ body {
 }
 
 .container .inner-container {
-  width: 130%;
+  width: 150%;
   margin: 0 auto;
 }
 
@@ -4803,7 +4803,7 @@ body {
   margin: 5.7rem;
   color: #ff94a1;
   font-size: 1.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-2 {
@@ -4837,7 +4837,7 @@ body {
   margin: 6.7rem;
   color: #31b4ff;
   font-size: 1.34rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-3 {
@@ -4871,7 +4871,7 @@ body {
   margin: 2.7rem;
   color: #cda1ff;
   font-size: 0.54rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-4 {
@@ -4939,7 +4939,7 @@ body {
   margin: 6.7rem;
   color: #cda1ff;
   font-size: 1.34rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-6 {
@@ -4973,7 +4973,7 @@ body {
   margin: 2.7rem;
   color: #cda1ff;
   font-size: 0.54rem;
-  content: "";
+  content: "△";
 }
 
 @-webkit-keyframes shape-7 {
@@ -5007,7 +5007,7 @@ body {
   margin: 7.7rem;
   color: #9300c9;
   font-size: 1.54rem;
-  content: "";
+  content: "△";
 }
 
 @-webkit-keyframes shape-8 {
@@ -5041,7 +5041,7 @@ body {
   margin: 8.7rem;
   color: #ff94a1;
   font-size: 1.74rem;
-  content: "";
+  content: "◠";
 }
 
 @-webkit-keyframes shape-9 {
@@ -5073,7 +5073,7 @@ body {
 
 .shape-container--9 .random-shape:after {
   margin: 8.7rem;
-  color: #cda1ff;
+  color: #d82e2e;
   font-size: 1.74rem;
   content: "";
 }
@@ -5243,9 +5243,9 @@ body {
 
 .shape-container--14 .random-shape:after {
   margin: 10.7rem;
-  color: #9300c9;
+  color: #c538f8;
   font-size: 2.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-15 {
@@ -5311,7 +5311,7 @@ body {
 
 .shape-container--16 .random-shape:after {
   margin: 1.7rem;
-  color: #ffef96;
+  color: #ffe75e;
   font-size: 0.34rem;
   content: "";
 }
@@ -5381,7 +5381,7 @@ body {
   margin: 9.7rem;
   color: #cda1ff;
   font-size: 1.94rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-19 {
@@ -5415,7 +5415,7 @@ body {
   margin: 9.7rem;
   color: #9300c9;
   font-size: 1.94rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-20 {
@@ -5447,7 +5447,7 @@ body {
 
 .shape-container--20 .random-shape:after {
   margin: 1.7rem;
-  color: #9300c9;
+  color: #3ef11a;
   font-size: 0.34rem;
   content: "";
 }
@@ -5517,7 +5517,7 @@ body {
   margin: 5.7rem;
   color: #31b4ff;
   font-size: 1.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-23 {
@@ -5687,7 +5687,7 @@ body {
   margin: 9.7rem;
   color: #9300c9;
   font-size: 1.94rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-28 {
@@ -5957,9 +5957,9 @@ body {
 
 .shape-container--35 .random-shape:after {
   margin: 9.7rem;
-  color: #ffef96;
+  color: #72ff20;
   font-size: 1.94rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-36 {
@@ -6061,7 +6061,7 @@ body {
   margin: 4.7rem;
   color: #31b4ff;
   font-size: 0.94rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-39 {
@@ -6093,7 +6093,7 @@ body {
 
 .shape-container--39 .random-shape:after {
   margin: 2.7rem;
-  color: #ffef96;
+  color: #00d9ff;
   font-size: 0.54rem;
   content: "";
 }
@@ -6129,7 +6129,7 @@ body {
   margin: 5.7rem;
   color: #45ffdc;
   font-size: 1.14rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-41 {
@@ -6231,7 +6231,7 @@ body {
   margin: 10.7rem;
   color: #31b4ff;
   font-size: 2.14rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-44 {
@@ -6263,7 +6263,7 @@ body {
 
 .shape-container--44 .random-shape:after {
   margin: 9.7rem;
-  color: #cda1ff;
+  color: #ffffff;
   font-size: 1.94rem;
   content: "";
 }
@@ -6333,7 +6333,7 @@ body {
   margin: 1.7rem;
   color: #ff94a1;
   font-size: 0.34rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-47 {
@@ -6367,7 +6367,7 @@ body {
   margin: 10.7rem;
   color: #cda1ff;
   font-size: 2.14rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-48 {
@@ -6401,7 +6401,7 @@ body {
   margin: 10.7rem;
   color: #ffef96;
   font-size: 2.14rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-49 {
@@ -6435,7 +6435,7 @@ body {
   margin: 5.7rem;
   color: #31b4ff;
   font-size: 1.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-50 {
@@ -6467,9 +6467,9 @@ body {
 
 .shape-container--50 .random-shape:after {
   margin: 9.7rem;
-  color: #ff94a1;
+  color: #ff1732;
   font-size: 1.94rem;
-  content: "";
+  content: "◠";
 }
 
 @-webkit-keyframes shape-51 {
@@ -6503,7 +6503,7 @@ body {
   margin: 5.7rem;
   color: #45ffdc;
   font-size: 1.14rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-52 {
@@ -6537,7 +6537,7 @@ body {
   margin: 9.7rem;
   color: #4800c0;
   font-size: 1.94rem;
-  content: "";
+  content: "◠";
 }
 
 @-webkit-keyframes shape-53 {
@@ -6605,7 +6605,7 @@ body {
   margin: 10.7rem;
   color: #ff94a1;
   font-size: 2.14rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-55 {
@@ -6639,7 +6639,7 @@ body {
   margin: 2.7rem;
   color: #31b4ff;
   font-size: 0.54rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-56 {
@@ -6673,7 +6673,7 @@ body {
   margin: 10.7rem;
   color: #ffef96;
   font-size: 2.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-57 {
@@ -6707,7 +6707,7 @@ body {
   margin: 1.7rem;
   color: #31b4ff;
   font-size: 0.34rem;
-  content: "";
+  content: "◠";
 }
 
 @-webkit-keyframes shape-58 {
@@ -6741,7 +6741,7 @@ body {
   margin: 10.7rem;
   color: #ff94a1;
   font-size: 2.14rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-59 {
@@ -6775,7 +6775,7 @@ body {
   margin: 3.7rem;
   color: #cda1ff;
   font-size: 0.74rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-60 {
@@ -6843,7 +6843,7 @@ body {
   margin: 8.7rem;
   color: #31b4ff;
   font-size: 1.74rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-62 {
@@ -6877,7 +6877,7 @@ body {
   margin: 9.7rem;
   color: #ffef96;
   font-size: 1.94rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-63 {
@@ -6911,7 +6911,7 @@ body {
   margin: 10.7rem;
   color: #9300c9;
   font-size: 2.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-64 {
@@ -6945,7 +6945,7 @@ body {
   margin: 9.7rem;
   color: #45ffdc;
   font-size: 1.94rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-65 {
@@ -6979,7 +6979,7 @@ body {
   margin: 8.7rem;
   color: #ffef96;
   font-size: 1.74rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-66 {
@@ -7047,7 +7047,7 @@ body {
   margin: 9.7rem;
   color: #cda1ff;
   font-size: 1.94rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-68 {
@@ -7081,7 +7081,7 @@ body {
   margin: 1.7rem;
   color: #ff94a1;
   font-size: 0.34rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-69 {
@@ -7115,7 +7115,7 @@ body {
   margin: 8.7rem;
   color: #ffef96;
   font-size: 1.74rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-70 {
@@ -7183,7 +7183,7 @@ body {
   margin: 3.7rem;
   color: #ff94a1;
   font-size: 0.74rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-72 {
@@ -7217,7 +7217,7 @@ body {
   margin: 1.7rem;
   color: #ffef96;
   font-size: 0.34rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-73 {
@@ -7285,7 +7285,7 @@ body {
   margin: 10.7rem;
   color: #ff94a1;
   font-size: 2.14rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-75 {
@@ -7319,7 +7319,7 @@ body {
   margin: 4.7rem;
   color: #ff94a1;
   font-size: 0.94rem;
-  content: "";
+  content: "◯";
 }
 
 @-webkit-keyframes shape-76 {
@@ -7353,7 +7353,7 @@ body {
   margin: 3.7rem;
   color: #cda1ff;
   font-size: 0.74rem;
-  content: "";
+  content: "○";
 }
 
 @-webkit-keyframes shape-77 {
@@ -7387,7 +7387,7 @@ body {
   margin: 2.7rem;
   color: #cda1ff;
   font-size: 0.54rem;
-  content: "";
+  content: "▵";
 }
 
 @-webkit-keyframes shape-78 {
@@ -7455,7 +7455,7 @@ body {
   margin: 1.7rem;
   color: #31b4ff;
   font-size: 0.34rem;
-  content: "";
+  content: "◠";
 }
 
 @-webkit-keyframes shape-80 {
@@ -7489,6 +7489,6 @@ body {
   margin: 10.7rem;
   color: #31b4ff;
   font-size: 2.14rem;
-  content: "";
+  content: "○";
 }
 /*# sourceMappingURL=shapes.css.map */
