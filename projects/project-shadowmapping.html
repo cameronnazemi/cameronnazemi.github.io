@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>SHADOW MAPPING WITH OPENGL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">Project Details</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Portfolio</a></li>
+							<!-- <li class="active"><a href="../generic.html">Generic Page</a></li> -->
+							<!-- <li><a href="../elements.html">Elements Reference</a></li> -->
+						</ul>
+						<ul class="icons">
+							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/cameronnazemi/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 12, 2021</span>
+									<h1>SHADOW MAPPING WITH OPENGL</h1>
+									<p>I present a graphical scene with shadows from at least one light source using OpenGL.</p>
+								</header>
+								<div class="image main"><img src="../images/ShadowMapping/FinalResult.png" alt="" /></div>
+								<a href="https://github.com/cameronnazemi/ShadowMappingProject"><br/>Project Source Code (My Github Repo)</a><br/>
+								<p>In this project, I sought to add a sense of realism to our digital world by the use of shadows. In a previous project, I created a scene and added lighting to that scene. This in turn made a dynamic and realistic frame that was comparable to a natural setting with lights reflecting off different objects and their geometries. </p>
+                                <div class="image main"><img src="../images/ShadowMapping/BeforeShadows.png" alt="" /></div>
+                                <p>The main thing it lacked was shadows. Shadows add depth and let the viewer immediately see where the light source comes from. Mix in the lighting and Blinn–Phong reflection model, and you inch closer to a scene that emulates reality. With this in mind, my goal was to build upon my previous projects source code to include Shadow Mapping. </p>
+								<p>Shadow Mapping is a shadowing technique that takes two rendering passes to complete. The first pass is a rendering of the scene from the point of view of the light, we put the camera at the position of the light source that is what will be casting the shadows. The image produced by this first pass will have a pixel value that is the depth of the scene. Basically it keeps record of the distances from the objects to the light source. Everything that can’t be seen from this view is going to be the shadows, and what we can see will be the objects lit. The second pass is a bit familiar, we are going to render basically the same scene as my previous project which is geometries with the Blinn-Phong lighting. Except we have the addition now of the shadowing computations. In these computations, we want to check if the current fragment is in the shadow or not. To do this, we will be checking if the distance between the light and the current fragment is at a greater distance than the distance between the light and the occluding geometry (The sampled depth that's been recorded in the texture). If it is the case that the sampled depth is at a location closer to the light source than the fragment is, then we make a shadow, if not it is where the light touches.
+                                </p>
+                                <p>This project was broken up into 4 different tasks. In the first task, I needed to get the depth information that will be used for the shadow calculation. To do this, I had to create a depth shader. I created the files depth.frag and depth.vert that are used to output the depth info using the z component of the fragment coordinates.
+								</p>
+
+								<div class="image main"><img src="../images/ShadowMapping/Step1.png" alt="" /></div>
+								<p>In the second task, I had to do some overloading of the draw method in order to accommodate both the depth shader and the previously implemented (in previous project) surface shader. After this was done, I was able to run the program and see the geometries from the view of the camera that output a gradient image of the depth that each fragment has. In my implementation, the image showed further pixels from the camera/light source as whiter and the closer pixels as darker..
+								</p>
+								<div class="image main"><img src="../images/ShadowMapping/Step2.png" alt="" /></div>
+								<p>In the third task, (this is the furthest I was able to achieve in my implementation) we need to adjust the Light.h file to “generate, initialize, bind, and configure the depth map texture and depth map FBO.” Then in the display() function of main.cpp, we have to set up the two passes mentioned above. These two passes will be calling the draw methods created in our Scene.cpp. The last task is to do the shadow computations. We check if the light-space depth is different from the camera to the fragment depth distance. If it's less, we know that the fragment is being occluded (because light-space depth is closer to the light source than the fragment depth) and there is a shadow.
+                                </p>
+                                <p>What the final result should look like:</p>
+                                <div class="image main"><img src="../images/ShadowMapping/FinalResult.png" alt="" /></div>
+                                <p>You can see the shadows of the objects caused by the light source to bounce off other objects as if a realistic scene.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<!-- <footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer> -->
+
+				<!-- Copyright -->
+					<!-- <div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

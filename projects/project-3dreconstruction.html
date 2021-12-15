@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>3D RECONSTRUCTION WITH OPENCV AND OPEN3D</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="../index.html" class="logo">Project Details</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="../index.html">Portfolio</a></li>
+							<!-- <li class="active"><a href="../generic.html">Generic Page</a></li> -->
+							<!-- <li><a href="../elements.html">Elements Reference</a></li> -->
+						</ul>
+						<ul class="icons">
+							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+							<li><a href="https://github.com/cameronnazemi/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">December 12, 2021</span>
+									<h1>3D RECONSTRUCTION WITH OPENCV AND OPEN3D</h1>
+									<p>Using 48 images of an object, I reconstructed the object digitally<br />
+                                    using OpenCV for identifying correspondence points and Open3D for further<br />
+                                    optimizations for a cleaner point cloud 3D reconstruction.</p>
+								</header>
+								<div class="image main"><img src="../images/3DReconstruction/3DReconstruction.png" alt="" /></div>
+								
+								<p>There is no denying that 3D reconstruction is an incredibly useful and powerful tool to have as a computer scientist. It is helpful in fields such as medicine and virtual reality because it allows for a complete interactive rendering of a person or object that can be accessed at any time and at any angle. In my approach to implement 3D reconstruction, I started from the beginning. Much like I did the Shi-Tomasi corner detection before, in this implementation I used SIFT, an even more powerful detection algorithm. I used the tutorial on opencv.org to get the keypoints and descriptors of each image. This step is important because it allows me to spot the points of interest. Next is time to start the reconstruction. I first used two images and found their correspondences using SIFT and the BFMatcher function’s knnMatch to find the matching points. But this didn’t give me that great of accuracy and gave me above 2000 corresponding  points (Most looked incorrect), so I had to perform a ratio test. In this ratio test, I was checking if the distances between match distances was less than a certain value. I found that 0.88 was a good number to multiply against the second value of the current match and gave me less points that produced more accurate results.</p>
+								<div class="image main"><img src="../images/3DReconstruction/Corrispondence.png" alt="" /></div>
+								<p>Next, I reconstructed the 3D points with triangulation using the OpenCV function triangulatePoints(), and in order to find the Camera matrix, I used the same method I implemented in a different project to do so. This was simply finding the dot product of the intrinsic matrix to the extrinsic matrix. When I visualized this, all I saw was a line of points on the screen, which was concerning, but I kept moving forward because I thought my further optimizations will fix this.</p>
+								<div class="image main"><img src="../images/3DReconstruction/Line.png" alt="" /></div>
+                                <p>Now it was time to include the other 46 images. But before that, I needed to make sure that my correspondence was noise free and remove false correspondences. This part was very challenging for me, I was having trouble trying to extract the R and t matrices from the extrinsic matrices. After lots of research, I was able to determine that a simple multiplication between the second extrinsic matrix and the inverse of the first extrinsic matrix would produce my essential matrix. From there, I would know that the 4th column was my t, and the 3x3 matrix to the left of that (columns 1-3) is my R. With this, I converted my t to t_cross, and used the same way I created the fundamental matrix in a different project with my new t_cross * R matrix. With my fundamental matrix, it would be time to remove outliers. This part was challenging as well, but after looking back at a different project’s RANSAC algorithm that I implemented, I was able to use parts of that algorithm to find the inlier x, y coordinates from point 1 and point 2 and return them. I had to fine tune the threshold in this and found 10 to be a good number. This reduced my number of correspondences to be more accurate. I ran the code that added more cameras, which took more than 6 minutes to complete. I visualized the results, only to find it was difficult to see anything that looks close to our photographed object.
+								</p>
+								<div class="image main"><img src="../images/3DReconstruction/BeforeOptimize.png" alt="" /></div>
+								<p>Time for optimizations! First, I needed to install the powerful package Open3D. Open3D would allow me to manipulate the point cloud and remove those pesky outliers. Because the Open3D visualizer doesn’t work with colab, I needed to use the pypotree visualizer. I first converted the numpy array to an Open3D pointcloud, allowing me to use Open3D methods. Then, I downsampled the point cloud using the voxel_size 0.001, I had first tried 0.02, but I found 0.001 produced a better result. Then it was time to remove outliers. There are two functions I tried, first was the statistical outlier removal, which no matter what settings I put, I couldn’t produce the correct construction. The second was the radius outlier removal, and after some tweaking of the parameters which made the radius of what would be considered inliers or outliers, I finally was able to produce a correct 3D pointcloud. I then converted from a Open3D pointcloud back to a numpy array, and visualized it using pypotree.
+								</p>
+								<div class="image main"><img src="../images/3DReconstruction/FinalResult.png" alt="" /></div>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<!-- <footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer> -->
+
+				<!-- Copyright -->
+					<!-- <div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div> -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
