@@ -4,6 +4,18 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+$(document).ready(function() {
+
+var html = '';
+for (var i = 1; i <= 50; i ++) {
+    html += '<div class="shape-container--'+i+' shape-animation"><div class="random-shape"></div></div>';
+}
+  
+document.querySelector('.shape').innerHTML += html;
+
+var $allShapes = $("[class*='shape-container--']");
+});
+
 (function($) {
 
 	var	$window = $(window),
