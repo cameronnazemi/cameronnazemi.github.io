@@ -3510,11 +3510,11 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 736px)  {
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 65vh;
 			}
 
 				#intro h1 {
@@ -3659,7 +3659,7 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 		transition: transform 1s ease, opacity 1s ease;
-		background: rgba(255, 255, 255, 0.175);
+		background: rgba(192, 161, 161, 0.175);
 		height: 4rem;
 		line-height: 4rem;
 		margin: -4rem auto 0 auto;
@@ -3766,7 +3766,7 @@ input, select, textarea {
 					}
 
 				#nav ul.links li.active {
-					background-color: #ffffff;
+					background-color: #d1d1d1;
 				}
 
 					#nav ul.links li.active a {
@@ -3800,7 +3800,7 @@ input, select, textarea {
 /* Main */
 
 	#main {
-		background-color: #ffffff;
+		background-color: #d1d1d1;
 		position: relative;
 		margin: 0 auto;
 		width: calc(100% - 4rem);
@@ -4764,7 +4764,7 @@ body {
 .shape {
   margin: 0 auto;
   position: relative;
-  opacity: 0.8;
+  opacity: 1.0;
 }
 
 .random-shape:after {
@@ -4971,7 +4971,7 @@ body {
 
 .shape-container--6 .random-shape:after {
   margin: 2.7rem;
-  color: #cda1ff;
+  color: #acacac;
   font-size: 0.54rem;
   content: "△";
 }
@@ -5141,7 +5141,7 @@ body {
 
 .shape-container--11 .random-shape:after {
   margin: 4.7rem;
-  color: #ffef96;
+  color: #4bc6ff;
   font-size: 0.94rem;
   content: "";
 }
@@ -5379,7 +5379,7 @@ body {
 
 .shape-container--18 .random-shape:after {
   margin: 9.7rem;
-  color: #cda1ff;
+  color: rgb(255, 55, 55);
   font-size: 1.94rem;
   content: "◯";
 }
@@ -5821,7 +5821,7 @@ body {
 
 .shape-container--31 .random-shape:after {
   margin: 5.7rem;
-  color: #9300c9;
+  color: #abc900;
   font-size: 1.14rem;
   content: "";
 }
@@ -7317,7 +7317,7 @@ body {
 
 .shape-container--75 .random-shape:after {
   margin: 4.7rem;
-  color: #ff94a1;
+  color: #4648e2;
   font-size: 0.94rem;
   content: "◯";
 }
@@ -7385,7 +7385,7 @@ body {
 
 .shape-container--77 .random-shape:after {
   margin: 2.7rem;
-  color: #cda1ff;
+  color: #2238ff;
   font-size: 0.54rem;
   content: "▵";
 }
@@ -7487,7 +7487,7 @@ body {
 
 .shape-container--80 .random-shape:after {
   margin: 10.7rem;
-  color: #31b4ff;
+  color: #31ff64;
   font-size: 2.14rem;
   content: "○";
 }
