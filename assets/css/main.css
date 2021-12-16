@@ -341,7 +341,7 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #18ef8b !important;
+			color: rgb(0, 214, 114) !important;
 		}
 
 	strong, b {
